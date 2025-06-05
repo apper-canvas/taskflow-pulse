@@ -41,12 +41,12 @@ const TaskList = ({
 
       {filteredTasks.length === 0 ? (
         <EmptyState searchQuery={searchQuery} onCreateTask={onCreateTask} />
-      ) : (
+) : (
         <div className="space-y-3">
           <AnimatePresence>
-            {filteredTasks.map(task => (
+            {filteredTasks.map((task, index) => (
               <TaskCard
-                key={task.id}
+                key={task.id || `task-${index}`}
                 task={task}
                 categories={categories}
                 onToggle={onTaskToggle}
