@@ -1,0 +1,50 @@
+[
+  {
+    "id": "cat-1",
+    "name": "Work Projects",
+    "color": "#6366F1",
+    "icon": "Briefcase",
+    "taskCount": 4,
+    "createdAt": "2023-12-01T00:00:00Z"
+  },
+  {
+    "id": "cat-2",
+    "name": "Development",
+    "color": "#10B981",
+    "icon": "Code",
+    "taskCount": 3,
+    "createdAt": "2023-12-01T00:00:00Z"
+  },
+  {
+    "id": "cat-3",
+    "name": "Personal",
+    "color": "#F59E0B",
+    "icon": "User",
+    "taskCount": 4,
+    "createdAt": "2023-12-01T00:00:00Z"
+  },
+  {
+    "id": "cat-4",
+    "name": "Health & Fitness",
+    "color": "#EF4444",
+    "icon": "Heart",
+    "taskCount": 0,
+    "createdAt": "2023-12-15T00:00:00Z"
+  },
+  {
+    "id": "cat-5",
+    "name": "Learning",
+    "color": "#8B5CF6",
+    "icon": "BookOpen",
+    "taskCount": 1,
+    "createdAt": "2023-12-20T00:00:00Z"
+  },
+  {
+    "id": "cat-6",
+    "name": "Finance",
+    "color": "#06B6D4",
+    "icon": "DollarSign",
+    "taskCount": 0,
+    "createdAt": "2024-01-01T00:00:00Z"
+  }
+]
