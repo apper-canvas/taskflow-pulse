@@ -21,8 +21,8 @@ const TaskList = ({
   return (
     <div className="bg-white dark:bg-gray-800 rounded-lg shadow-card p-6">
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-lg font-semibold text-gray-900 dark:text-white">
-          {activeCategory === 'all' ? 'All Tasks' : categories.find(c => c.id === activeCategory)?.name || 'Tasks'}
+<h2 className="text-lg font-semibold text-gray-900 dark:text-white">
+          {activeCategory === 'all' ? 'All Tasks' : categories.find(c => c.Id === activeCategory)?.Name || 'Tasks'}
         </h2>
         <Button
           onClick={() => toast.info("Productivity insights launching next month")}

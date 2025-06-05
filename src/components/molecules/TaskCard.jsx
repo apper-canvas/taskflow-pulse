@@ -44,17 +44,16 @@ const TaskCard = ({ task, categories, onToggle, onDelete, onEdit }) => {
           
           <div className="flex items-center gap-2 flex-wrap">
             <Badge priority={task.priority} />
-            
-            {task.dueDate && (
+{task.due_date && (
               <Badge 
                 icon="Calendar"
                 className={isOverdue ? 'overdue' : 'due'}
               >
-                {new Date(task.dueDate).toLocaleDateString()}
+                {new Date(task.due_date).toLocaleDateString()}
               </Badge>
             )}
             
-            {task.categoryId && (
+            {task.category_id && (
               <span className="text-xs text-gray-500 dark:text-gray-400">
                 {categoryName}
               </span>

@@ -87,28 +87,23 @@ const TaskModal = ({
 
     setLoading(true);
     try {
-      const taskData = {
-        ...formData,
+const taskData = {
         title: formData.title.trim(),
         description: formData.description.trim(),
         notes: formData.notes.trim(),
         dueDate: formData.dueDate || null,
-        updatedAt: new Date().toISOString()
+        categoryId: formData.categoryId || null,
+        priority: formData.priority,
+        status: formData.status
       };
 
       if (isEditing && showTaskDetail) {
-        const updatedTask = await taskService.update(showTaskDetail.id, {
-          ...showTaskDetail,
-          ...taskData
-        });
-        setTasks(prev => prev.map(t => t.id === showTaskDetail.id ? updatedTask : t));
+        const updatedTask = await taskService.update(showTaskDetail.Id || showTaskDetail.id, taskData);
+        setTasks(prev => prev.map(t => (t.Id || t.id) === (showTaskDetail.Id || showTaskDetail.id) ? updatedTask : t));
         toast.success('Task updated successfully!');
         setShowTaskDetail(null);
       } else {
-        const newTask = await taskService.create({
-          ...taskData,
-          createdAt: new Date().toISOString()
-        });
+        const newTask = await taskService.create(taskData);
         setTasks(prev => [...prev, newTask]);
         toast.success('Task created successfully!');
         setShowCreateModal(false);
